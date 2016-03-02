@@ -30,8 +30,8 @@ class Pokemon
     //Constructor or Initializer
     init(name: String, pokedexId: Int)
     {
-        _name = name
-        _pokedexId = pokedexId
+        self._name = name
+        self._pokedexId = pokedexId
     }
     
 }
