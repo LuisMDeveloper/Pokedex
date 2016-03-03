@@ -9,18 +9,20 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
 
     
     //Outlets
     @IBOutlet weak var collection: UICollectionView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     
-    
-    
+    //Boolean to determine if we are filterin Pokemon or not
+    var inSearchMode: Bool = false
     
     //Array of all the pokemon names
     var pokemones = [Pokemon]()
+    var filteredPokemones = [Pokemon]()
     
     //Music Player
     var musicPlayer: AVAudioPlayer!
@@ -31,7 +33,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         collection.delegate = self
         collection.dataSource = self
-        
+        searchBar.delegate = self
+        searchBar.returnKeyType = UIReturnKeyType.Done
         parsePokemonCSV()
         initAudio()
     }
@@ -84,7 +87,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PokeCell", forIndexPath: indexPath) as? PokeCell
         {
             //Create a Pokemon object for each cell at the current indexPath
-            var currentPokemon = pokemones[indexPath.row]
+            var currentPokemon: Pokemon!
+            
+            
+            //Determine from which array we fill our collection view
+            if inSearchMode
+            {
+                currentPokemon = filteredPokemones[indexPath.row]
+            } else {
+                currentPokemon = pokemones[indexPath.row]
+            }
+            
+            
+            
             //Configure each cell with a pokemon corresponding to the index path
             cell.configureCell(currentPokemon)
             return cell
@@ -103,7 +118,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 718
+        if inSearchMode
+        {
+            return filteredPokemones.count
+        }
+        
+        return pokemones.count
     }
 
     
@@ -116,6 +136,41 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         return CGSizeMake(105, 105)
     }
+    
+    
+    //Search Bar Delegate Methods
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text == nil || searchBar.text == ""
+        {
+            inSearchMode = false
+            collection.reloadData()
+            //Close keyboard
+            view.endEditing(true)
+        } else {
+            inSearchMode = true
+            //Start Pokemon Filtering process
+            let query = searchBar.text!.lowercaseString
+            //Filter the original Pokemones array with the query and store the result (filtered) array in filteredPokemones array.
+            filteredPokemones = pokemones.filter({ $0.name.rangeOfString(query) != nil })
+            //Refresh collection view with the filtered pokemon
+            collection.reloadData()
+        }
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        inSearchMode = false
+        //Close keyboard
+        view.endEditing(true)
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        inSearchMode = false
+        //Close keyboard
+        view.endEditing(true)
+    }
+    
+    
 
     @IBAction func musicButton(sender: UIButton!) {
         
@@ -127,10 +182,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             musicPlayer.play()
             sender.setImage(UIImage(named: "speaker.png"), forState: .Normal)
         }
-        
-        
-        
-        
         
     }
 }
