@@ -15,10 +15,12 @@
 		8155B59E1C8742CD0046B0A3 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8155B59D1C8742CD0046B0A3 /* pokemon.csv */; };
 		8155B5A11C874A320046B0A3 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8155B5A01C874A320046B0A3 /* Pokemon.swift */; };
 		8155B5A41C87657F0046B0A3 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8155B5A31C87657F0046B0A3 /* PokeCell.swift */; };
+		8155B5A61C87B4C30046B0A3 /* CSV_Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8155B5A51C87B4C30046B0A3 /* CSV_Parser.swift */; };
+		8155B5AC1C87C4910046B0A3 /* pokefont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8155B5AB1C87C4910046B0A3 /* pokefont.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8155B5881C873D1F0046B0A3 /* Pokedex by Juanjo Santos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pokedex by Juanjo Santos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8155B5881C873D1F0046B0A3 /* Pokédex by JS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pokédex by JS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8155B58B1C873D1F0046B0A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8155B58D1C873D1F0046B0A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8155B5901C873D1F0046B0A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,6 +30,8 @@
 		8155B59D1C8742CD0046B0A3 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 		8155B5A01C874A320046B0A3 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		8155B5A31C87657F0046B0A3 /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
+		8155B5A51C87B4C30046B0A3 /* CSV_Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSV_Parser.swift; sourceTree = "<group>"; };
+		8155B5AB1C87C4910046B0A3 /* pokefont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pokefont.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +56,7 @@
 		8155B5891C873D1F0046B0A3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8155B5881C873D1F0046B0A3 /* Pokedex by Juanjo Santos.app */,
+				8155B5881C873D1F0046B0A3 /* Pokédex by JS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,9 +66,10 @@
 			children = (
 				8155B59F1C874A0F0046B0A3 /* Data Model */,
 				8155B5A21C8765300046B0A3 /* View */,
+				8155B5A71C87B5150046B0A3 /* Controller */,
+				8155B5A81C87B5470046B0A3 /* Resources */,
+				8155B5A91C87B5510046B0A3 /* Utilities */,
 				8155B58B1C873D1F0046B0A3 /* AppDelegate.swift */,
-				8155B58D1C873D1F0046B0A3 /* ViewController.swift */,
-				8155B59D1C8742CD0046B0A3 /* pokemon.csv */,
 				8155B58F1C873D1F0046B0A3 /* Main.storyboard */,
 				8155B5921C873D1F0046B0A3 /* Assets.xcassets */,
 				8155B5941C873D1F0046B0A3 /* LaunchScreen.storyboard */,
@@ -89,6 +94,31 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		8155B5A71C87B5150046B0A3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8155B58D1C873D1F0046B0A3 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8155B5A81C87B5470046B0A3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8155B5AB1C87C4910046B0A3 /* pokefont.ttf */,
+				8155B59D1C8742CD0046B0A3 /* pokemon.csv */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8155B5A91C87B5510046B0A3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8155B5A51C87B4C30046B0A3 /* CSV_Parser.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,7 +136,7 @@
 			);
 			name = "Pokedex by Juanjo Santos";
 			productName = "Pokedex by Juanjo Santos";
-			productReference = 8155B5881C873D1F0046B0A3 /* Pokedex by Juanjo Santos.app */;
+			productReference = 8155B5881C873D1F0046B0A3 /* Pokédex by JS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -148,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8155B5AC1C87C4910046B0A3 /* pokefont.ttf in Resources */,
 				8155B5961C873D1F0046B0A3 /* LaunchScreen.storyboard in Resources */,
 				8155B5931C873D1F0046B0A3 /* Assets.xcassets in Resources */,
 				8155B59E1C8742CD0046B0A3 /* pokemon.csv in Resources */,
@@ -166,6 +197,7 @@
 				8155B58E1C873D1F0046B0A3 /* ViewController.swift in Sources */,
 				8155B58C1C873D1F0046B0A3 /* AppDelegate.swift in Sources */,
 				8155B5A11C874A320046B0A3 /* Pokemon.swift in Sources */,
+				8155B5A61C87B4C30046B0A3 /* CSV_Parser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +311,8 @@
 				INFOPLIST_FILE = "Pokedex by Juanjo Santos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.juanjosantos.Pokedex-by-Juanjo-Santos";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Pokédex by JS";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -290,7 +323,8 @@
 				INFOPLIST_FILE = "Pokedex by Juanjo Santos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.juanjosantos.Pokedex-by-Juanjo-Santos";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Pokédex by JS";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
