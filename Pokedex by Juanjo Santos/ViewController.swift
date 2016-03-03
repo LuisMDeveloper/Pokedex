@@ -39,6 +39,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collection.dataSource = self
         searchBar.delegate = self
         searchBar.returnKeyType = UIReturnKeyType.Done
+        searchBar.showsCancelButton = false
         parsePokemonCSV()
         initAudio()
     }
@@ -103,10 +104,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
             
             //Determine if we will show Shiny Pokemon
-            if inShiny
+            if inShiny && indexPath.row < 650
             {
+                //Add only the first 650 shiny, the rest add them normal
+            
                 //Configure each cell with a SHINY pokemon corresponding to the index path
                 cell.configureShinyCell(currentPokemon)
+            
             } else {
                 //Configure each cell with a pokemon corresponding to the index path
                 cell.configureCell(currentPokemon)
@@ -183,6 +187,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+    
+    
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         inSearchMode = false
         //Close keyboard
@@ -190,7 +199,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchBar.text = ""
         inSearchMode = false
+        collection.reloadData()
         //Close keyboard
         view.endEditing(true)
     }
