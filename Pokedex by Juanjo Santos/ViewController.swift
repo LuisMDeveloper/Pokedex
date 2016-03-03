@@ -15,10 +15,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     //Outlets
     @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var shinyButtonO: UIButton!
+    @IBOutlet weak var speakerButtonO: UIButton!
     
     
-    //Boolean to determine if we are filterin Pokemon or not
+    //Boolean to determine if we are filtering Pokemon or not
     var inSearchMode: Bool = false
+    //Boolean to determine if we are looking at Shiny Pokemon or not
+    var inShiny: Bool = false
     
     //Array of all the pokemon names
     var pokemones = [Pokemon]()
@@ -98,10 +102,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 currentPokemon = pokemones[indexPath.row]
             }
             
+            //Determine if we will show Shiny Pokemon
+            if inShiny
+            {
+                //Configure each cell with a SHINY pokemon corresponding to the index path
+                cell.configureShinyCell(currentPokemon)
+            } else {
+                //Configure each cell with a pokemon corresponding to the index path
+                cell.configureCell(currentPokemon)
+            }
             
             
-            //Configure each cell with a pokemon corresponding to the index path
-            cell.configureCell(currentPokemon)
             return cell
         }
         else
@@ -184,21 +195,32 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         view.endEditing(true)
     }
     
-    
+   
 
-    @IBAction func musicButton(sender: UIButton!) {
-        
+    @IBAction func shinyButton() {
+        if !inShiny {
+            inShiny = true
+            collection.reloadData()
+            shinyButtonO.setImage(UIImage(named: "25s.png"), forState: .Normal)
+        } else {
+            inShiny = false
+            collection.reloadData()
+            shinyButtonO.setImage(UIImage(named: "25.png"), forState: .Normal)
+        }
+    }
+    
+    
+    @IBAction func speakerButton() {
         if musicPlayer.playing
         {
             musicPlayer.stop()
-            sender.setImage(UIImage(named: "speakerm.png"), forState: .Normal)
+            
+            speakerButtonO.setImage(UIImage(named: "speakerm.png"), forState: .Normal)
         } else {
             musicPlayer.play()
-            sender.setImage(UIImage(named: "speaker.png"), forState: .Normal)
+            speakerButtonO.setImage(UIImage(named: "speaker.png"), forState: .Normal)
         }
-        
     }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail"
         {

@@ -48,18 +48,58 @@
                                         </constraints>
                                         <state key="normal" image="speaker"/>
                                         <connections>
-                                            <action selector="musicButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bjc-qu-N2Q"/>
+                                            <action selector="speakerButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qjb-B5-Rzf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1m-eY-lAZ">
+                                        <rect key="frame" x="6" y="9" width="55" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="23" id="1D3-Bo-Uo1"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="55" id="4eq-iv-kN9"/>
+                                            <constraint firstAttribute="width" constant="55" id="AQu-As-aaY"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="55" id="V9W-kh-JeC"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="dPj-rS-FbL"/>
+                                            <constraint firstAttribute="width" constant="24" id="quS-EO-TKi"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="55" id="tSu-MH-Pot"/>
+                                            <constraint firstAttribute="height" constant="55" id="xp1-ye-QQ8"/>
+                                        </constraints>
+                                        <state key="normal" image="25"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="1D3-Bo-Uo1"/>
+                                                <exclude reference="4eq-iv-kN9"/>
+                                                <exclude reference="V9W-kh-JeC"/>
+                                                <exclude reference="dPj-rS-FbL"/>
+                                                <exclude reference="quS-EO-TKi"/>
+                                                <exclude reference="tSu-MH-Pot"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="shinyButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="YVV-tp-oeQ"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.34509803921568627" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="5dZ-VU-7ew" firstAttribute="centerX" secondItem="zIi-Cv-KNO" secondAttribute="centerX" id="3qG-hm-Ul7"/>
+                                    <constraint firstItem="N1m-eY-lAZ" firstAttribute="leading" secondItem="zIi-Cv-KNO" secondAttribute="leadingMargin" id="Acr-oP-IsA"/>
+                                    <constraint firstAttribute="bottom" secondItem="N1m-eY-lAZ" secondAttribute="bottom" constant="-9" id="Fzc-H3-gPW"/>
                                     <constraint firstAttribute="trailing" secondItem="zKc-rQ-3ZO" secondAttribute="trailing" constant="8" id="Tp7-P5-8Zr"/>
                                     <constraint firstAttribute="bottom" secondItem="zKc-rQ-3ZO" secondAttribute="bottom" constant="6" id="YFJ-pG-Mwf"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="N1m-eY-lAZ" secondAttribute="bottom" constant="8" id="f1b-HS-xnc"/>
                                     <constraint firstAttribute="height" constant="55" id="gVm-bd-P4n"/>
                                     <constraint firstItem="5dZ-VU-7ew" firstAttribute="top" secondItem="zIi-Cv-KNO" secondAttribute="top" constant="19" id="hNM-TR-0rG"/>
+                                    <constraint firstItem="N1m-eY-lAZ" firstAttribute="top" secondItem="zIi-Cv-KNO" secondAttribute="top" constant="9" id="jR9-Wk-evI"/>
+                                    <constraint firstItem="N1m-eY-lAZ" firstAttribute="top" secondItem="zIi-Cv-KNO" secondAttribute="topMargin" constant="8" id="mr3-FA-qfu"/>
+                                    <constraint firstItem="N1m-eY-lAZ" firstAttribute="leading" secondItem="zIi-Cv-KNO" secondAttribute="leading" constant="6" id="zwS-7k-OMb"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Acr-oP-IsA"/>
+                                        <exclude reference="f1b-HS-xnc"/>
+                                        <exclude reference="mr3-FA-qfu"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1ug-qj-JGT">
                                 <rect key="frame" x="20" y="119" width="560" height="461"/>
@@ -138,6 +178,8 @@
                     <connections>
                         <outlet property="collection" destination="1ug-qj-JGT" id="ecu-FH-Nzq"/>
                         <outlet property="searchBar" destination="0Cx-AS-8yq" id="d5h-bm-ehp"/>
+                        <outlet property="shinyButtonO" destination="N1m-eY-lAZ" id="dBt-8Y-kCp"/>
+                        <outlet property="speakerButtonO" destination="zKc-rQ-3ZO" id="AMS-gu-x2b"/>
                         <segue destination="fiz-XW-uO2" kind="show" identifier="showDetail" id="wt9-dS-hjM"/>
                     </connections>
                 </viewController>
@@ -179,7 +221,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="193" width="120" height="120"/>
+        <image name="193" width="96" height="96"/>
+        <image name="25" width="96" height="96"/>
         <image name="pbg" width="1920" height="1200"/>
         <image name="speaker" width="512" height="512"/>
     </resources>
