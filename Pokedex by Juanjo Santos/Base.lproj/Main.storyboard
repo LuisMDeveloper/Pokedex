@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="pokefont.ttf">
@@ -29,10 +30,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zIi-Cv-KNO">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pokédex by Juanjo Santos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dZ-VU-7ew">
-                                        <rect key="frame" x="181" y="19" width="239" height="36"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokédex by Juanjo Santos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dZ-VU-7ew">
+                                        <rect key="frame" x="164" y="19" width="272" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="8c7-z4-tNt"/>
+                                            <constraint firstAttribute="width" constant="272" id="eSk-n7-YEm"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -136,11 +138,44 @@
                     <connections>
                         <outlet property="collection" destination="1ug-qj-JGT" id="ecu-FH-Nzq"/>
                         <outlet property="searchBar" destination="0Cx-AS-8yq" id="d5h-bm-ehp"/>
+                        <segue destination="fiz-XW-uO2" kind="show" identifier="showDetail" id="wt9-dS-hjM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="387"/>
+        </scene>
+        <!--Pokemon Detail View Controller-->
+        <scene sceneID="SGb-ul-vbk">
+            <objects>
+                <viewController id="fiz-XW-uO2" customClass="PokemonDetailViewController" customModule="Pokédex_by_JS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f3C-ve-6sT"/>
+                        <viewControllerLayoutGuide type="bottom" id="3n9-1c-kb9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bzx-3p-3i1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZoH-Em-0h0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
+                                <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Z2F-BY-cXb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZoH-Em-0h0" firstAttribute="leading" secondItem="bzx-3p-3i1" secondAttribute="leadingMargin" constant="-20" id="9L3-3v-Nu3"/>
+                            <constraint firstItem="ZoH-Em-0h0" firstAttribute="top" secondItem="bzx-3p-3i1" secondAttribute="topMargin" id="U5I-Du-MIN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZoH-Em-0h0" secondAttribute="trailing" constant="-20" id="w7u-kn-e1V"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Exm-Bu-tfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1017" y="387"/>
         </scene>
     </scenes>
     <resources>

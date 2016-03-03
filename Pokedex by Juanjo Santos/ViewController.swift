@@ -114,6 +114,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
+        //The pokemon the user chose can be chosen from the filtered or unfiltered array
+        var selectedPokemon: Pokemon!
+        
+        if inSearchMode
+        {
+            selectedPokemon = filteredPokemones[indexPath.row]
+        } else {
+            selectedPokemon = pokemones[indexPath.row]
+        }
+        
+        //                                       SEND THE SELECTED POKEMON TO THE DETAIL VC
+        performSegueWithIdentifier("showDetail", sender: selectedPokemon)
+        
+        
     }
     
     
@@ -183,6 +197,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             sender.setImage(UIImage(named: "speaker.png"), forState: .Normal)
         }
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showDetail"
+        {
+            //Create an instance of the details VC
+            if let DetailsVCInstance = segue.destinationViewController as? PokemonDetailViewController {
+                //Create an instance of the SENDER
+                if let pokeSender = sender as? Pokemon {
+                    //Send the Pokemon
+                    DetailsVCInstance.recievedPokemon = pokeSender
+                }
+            }
+        }
     }
 }
 

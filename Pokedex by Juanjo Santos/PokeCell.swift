@@ -36,5 +36,14 @@ class PokeCell: UICollectionViewCell {
         thumbImg.image = UIImage(named: "\(self.pokemon.pokedexId)")
     }
     
+    func configureShinyCell(pokemon: Pokemon)
+    {
+        self.pokemon = pokemon
+        //Set name
+        nameLbl.text = self.pokemon.name.capitalizedString
+        //Set image
+        thumbImg.image = UIImage(named: "\(self.pokemon.pokedexId)"+"s")
+    }
+    
     
 }
