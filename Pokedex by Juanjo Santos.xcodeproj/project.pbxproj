@@ -17,6 +17,7 @@
 		8155B5A41C87657F0046B0A3 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8155B5A31C87657F0046B0A3 /* PokeCell.swift */; };
 		8155B5A61C87B4C30046B0A3 /* CSV_Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8155B5A51C87B4C30046B0A3 /* CSV_Parser.swift */; };
 		8155B5AC1C87C4910046B0A3 /* pokefont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8155B5AB1C87C4910046B0A3 /* pokefont.ttf */; };
+		8155B5AE1C87CCCB0046B0A3 /* poketheme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8155B5AD1C87CCCB0046B0A3 /* poketheme.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		8155B5A31C87657F0046B0A3 /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
 		8155B5A51C87B4C30046B0A3 /* CSV_Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSV_Parser.swift; sourceTree = "<group>"; };
 		8155B5AB1C87C4910046B0A3 /* pokefont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pokefont.ttf; sourceTree = "<group>"; };
+		8155B5AD1C87CCCB0046B0A3 /* poketheme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = poketheme.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				8155B5AB1C87C4910046B0A3 /* pokefont.ttf */,
+				8155B5AD1C87CCCB0046B0A3 /* poketheme.mp3 */,
 				8155B59D1C8742CD0046B0A3 /* pokemon.csv */,
 			);
 			name = Resources;
@@ -181,6 +184,7 @@
 				8155B5AC1C87C4910046B0A3 /* pokefont.ttf in Resources */,
 				8155B5961C873D1F0046B0A3 /* LaunchScreen.storyboard in Resources */,
 				8155B5931C873D1F0046B0A3 /* Assets.xcassets in Resources */,
+				8155B5AE1C87CCCB0046B0A3 /* poketheme.mp3 in Resources */,
 				8155B59E1C8742CD0046B0A3 /* pokemon.csv in Resources */,
 				8155B5911C873D1F0046B0A3 /* Main.storyboard in Resources */,
 			);

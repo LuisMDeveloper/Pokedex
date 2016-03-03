@@ -29,8 +29,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zIi-Cv-KNO">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokédex by Juanjo Santos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dZ-VU-7ew">
-                                        <rect key="frame" x="169" y="19" width="263" height="36"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pokédex by Juanjo Santos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dZ-VU-7ew">
+                                        <rect key="frame" x="181" y="19" width="239" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="8c7-z4-tNt"/>
                                         </constraints>
@@ -38,10 +38,23 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKc-rQ-3ZO">
+                                        <rect key="frame" x="568" y="26" width="24" height="23"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="23" id="MbN-dm-4GI"/>
+                                            <constraint firstAttribute="width" constant="24" id="Xdt-zh-MGD"/>
+                                        </constraints>
+                                        <state key="normal" image="speaker"/>
+                                        <connections>
+                                            <action selector="musicButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bjc-qu-N2Q"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.34509803921568627" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="5dZ-VU-7ew" firstAttribute="centerX" secondItem="zIi-Cv-KNO" secondAttribute="centerX" id="3qG-hm-Ul7"/>
+                                    <constraint firstAttribute="trailing" secondItem="zKc-rQ-3ZO" secondAttribute="trailing" constant="8" id="Tp7-P5-8Zr"/>
+                                    <constraint firstAttribute="bottom" secondItem="zKc-rQ-3ZO" secondAttribute="bottom" constant="6" id="YFJ-pG-Mwf"/>
                                     <constraint firstAttribute="height" constant="55" id="gVm-bd-P4n"/>
                                     <constraint firstItem="5dZ-VU-7ew" firstAttribute="top" secondItem="zIi-Cv-KNO" secondAttribute="top" constant="19" id="hNM-TR-0rG"/>
                                 </constraints>
@@ -131,5 +144,6 @@
     <resources>
         <image name="193" width="120" height="120"/>
         <image name="pbg" width="1920" height="1200"/>
+        <image name="speaker" width="512" height="512"/>
     </resources>
 </document>
