@@ -36,9 +36,14 @@ class PokemonDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        nameLbl.text = recievedPokemon.name.capitalizedString
+        idLbl.text = "#\(recievedPokemon.pokedexId)"
+        imgLbl.image = UIImage(named: "\(recievedPokemon.pokedexId)")
         
-        
-        
+        recievedPokemon.downloadPokemonInfo { () -> () in
+            //This code will be called AFTER the download is completed.
+            
+        }
         
         
     }

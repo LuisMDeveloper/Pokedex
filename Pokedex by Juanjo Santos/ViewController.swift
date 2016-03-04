@@ -104,7 +104,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
             
             //Determine if we will show Shiny Pokemon
-            if inShiny && indexPath.row < 650
+            if inShiny && /*indexPath.row < 650 &&*/ currentPokemon.pokedexId < 650
             {
                 //Add only the first 650 shiny, the rest add them normal
             
