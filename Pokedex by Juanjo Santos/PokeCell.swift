@@ -13,6 +13,7 @@ class PokeCell: UICollectionViewCell {
     //Outlets to elements of the cell: Image and Name
     @IBOutlet weak var thumbImg: UIImageView!
     @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var idLbl: UILabel!
     
     //Create an instance of Pokemon
     var pokemon: Pokemon!
@@ -34,6 +35,8 @@ class PokeCell: UICollectionViewCell {
         nameLbl.text = self.pokemon.name.capitalizedString
         //Set image
         thumbImg.image = UIImage(named: "\(self.pokemon.pokedexId)")
+        //Set id
+        idLbl.text = "#"+"\(self.pokemon.pokedexId)"
     }
     
     func configureShinyCell(pokemon: Pokemon)
@@ -43,6 +46,8 @@ class PokeCell: UICollectionViewCell {
         nameLbl.text = self.pokemon.name.capitalizedString
         //Set image
         thumbImg.image = UIImage(named: "\(self.pokemon.pokedexId)"+"s")
+        //Set id
+        idLbl.text = "#"+"\(self.pokemon.pokedexId)"
     }
     
     

@@ -10,6 +10,8 @@ import UIKit
 
 class PokemonDetailViewController: UIViewController {
 
+    //Outlets
+    
     
     
     var recievedPokemon: Pokemon!
@@ -22,7 +24,7 @@ class PokemonDetailViewController: UIViewController {
 
         
         
-        print(recievedPokemon.name)
+        
         
         
     }
