@@ -15,27 +15,72 @@ class Pokemon
     //Atrtibutes
     private var _name: String!
     private var _pokedexId: Int!
-    private var _description: String?
-    private var _type1: String?
-    private var _type2: String?
-    private var _height: String?
-    private var _weight: String?
-    private var _evoName: String?
-    private var _evoLvl: String?
-    private var _evoId: String?
-    
+    private var _description: String!
+    private var _type1: String!
+    private var _type2: String!
+    private var _height: String!
+    private var _weight: String!
+    private var _evoName: String!
+    private var _evoLvl: String!
+    private var _evoId: String!
     private var _pokemonURL: String!
     
     //Getters
-    var name: String
-    {
-       return _name
+    var name: String {
+        return _name
     }
-    
-    var pokedexId: Int
-    {
+    var pokedexId: Int {
         return _pokedexId
     }
+    var description: String {
+        if _description == nil {
+            _description = ""
+        }
+        return _description
+    }
+    var type1: String {
+        if _type1 == nil {
+            _type1 = ""
+        }
+        return _type1
+    }
+    var type2: String {
+        if _type2 == nil {
+            _type2 = ""
+        }
+        return _type2
+    }
+    var height: String {
+        if _height == nil {
+            _height = ""
+        }
+        return _height
+    }
+    var weight: String {
+        if _weight == nil {
+            _weight = ""
+        }
+        return _weight
+    }
+    var evoName: String {
+        if _evoName == nil {
+            _evoName = ""
+        }
+        return _evoName
+    }
+    var evoLvl: String {
+        if _evoLvl == nil {
+            _evoLvl = ""
+        }
+        return _evoLvl
+    }
+    var evoId: String {
+        if _evoId == nil {
+            _evoId = ""
+        }
+        return _evoId
+    }
+        
     
     //Constructor or Initializer
     init(name: String, pokedexId: Int)
@@ -60,28 +105,7 @@ class Pokemon
             if let dict = result.value as? Dictionary<String, AnyObject> {
                 
                 //First make sure it exists, and then use it
-                //Before Parsing the other attributes, first make the other Alamofire Request
-                //so it starts downloading. Like a Stack.
-                //PARSE JSON for Description
-                if let descriptions = dict["descriptions"] as? [Dictionary<String,String>] where descriptions.count > 0 {
-                    if let url = descriptions[0]["resource_uri"] {
-                        //Since the JSON includes a URL instead of the actual description,
-                        //we need to make another Request with the url provided
-                        let nsurl = NSURL(string: "\(URL_BASE)\(url)")!
-                        Alamofire.request(.GET, nsurl).responseJSON { response in
-                            let desResult = response.result
-                            if let descDict = desResult.value as? Dictionary<String,AnyObject> {
-                                if let description = descDict["description"] as? String {
-                                    self._description = description
-                                    
-                                }
-                            }
-                            completed()
-                        }
-                    }
-                } else {
-                    self._description = ""
-                }
+                
                 //PARSE JSON for Weight
                 if let weight = dict["weight"] as? String {
                     self._weight = weight
@@ -135,6 +159,27 @@ class Pokemon
                         }
                     }
                     
+                }
+                
+                //PARSE JSON for Description
+                if let descriptions = dict["descriptions"] as? [Dictionary<String,String>] where descriptions.count > 0 {
+                    if let url = descriptions[0]["resource_uri"] {
+                        //Since the JSON includes a URL instead of the actual description,
+                        //we need to make another Request with the url provided
+                        let nsurl = NSURL(string: "\(URL_BASE)\(url)")!
+                        Alamofire.request(.GET, nsurl).responseJSON { response in
+                            let desResult = response.result
+                            if let descDict = desResult.value as? Dictionary<String,AnyObject> {
+                                if let description = descDict["description"] as? String {
+                                    self._description = description
+                                    
+                                }
+                            }
+                            completed() //SAY THAT WE ARE FINISHED DOWNLOADING DATA FROM THE API
+                        }
+                    }
+                } else {
+                    self._description = ""
                 }
                 
                 

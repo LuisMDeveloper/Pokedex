@@ -239,7 +239,7 @@
                                             <action selector="shinyButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="19L-6n-XQx"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fletchinder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6O-2V-Rgp">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6O-2V-Rgp">
                                         <rect key="frame" x="240" y="32" width="121" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="181" id="8Yw-LY-KKq"/>
@@ -302,7 +302,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="x2g-PW-dBZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x2g-PW-dBZ">
                                 <rect key="frame" x="20" y="119" width="96" height="96"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="O44-KU-gqk"/>
@@ -334,15 +334,11 @@
                                     </mask>
                                 </variation>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="JCg-fr-kSL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="JCg-fr-kSL">
                                 <rect key="frame" x="124" y="119" width="456" height="96"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="96" id="tLT-YX-bv8"/>
                                 </constraints>
-                                <string key="text">While it is not known to evolve into or from any other Pokémon, it will change type when it is holding a Plate.
-Like Darkrai and Shaymin before it, Arceus was not officially recognized by Nintendo until February 14, 2009, the year of its debut movie. It was officially revealed to international audiences on August 3, 2009.
-Arceus is known as "The Original One", as it is said that it created Sinnoh and Ransei, and possibly the entire Pokémon universe, along with the lake guardians and creation trio.
-It is the trio master of both the lake guardians and the creation trio.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -355,7 +351,7 @@ It is the trio master of both the lake guardians and the creation trio.</string>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grass" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKg-DB-9uF">
                                 <rect key="frame" x="20" y="228" width="96" height="21"/>
-                                <color key="backgroundColor" red="0.0" green="0.66442228619999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="96" id="5zb-l9-Z3k"/>
                                     <constraint firstAttribute="height" constant="21" id="LIE-9N-T2n"/>
@@ -366,7 +362,7 @@ It is the trio master of both the lake guardians and the creation trio.</string>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqw-Da-eLu">
                                 <rect key="frame" x="20" y="257" width="96" height="21"/>
-                                <color key="backgroundColor" red="0.0" green="0.66442228619999999" blue="0.8999023438" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="96" id="ka8-FQ-XWL"/>
                                     <constraint firstAttribute="height" constant="21" id="qQd-Lc-bpo"/>
@@ -375,7 +371,7 @@ It is the trio master of both the lake guardians and the creation trio.</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="25.8 m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfh-ax-V0o">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfh-ax-V0o">
                                 <rect key="frame" x="241" y="228" width="64" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="aVm-PZ-tON"/>
@@ -391,8 +387,8 @@ It is the trio master of both the lake guardians and the creation trio.</string>
                                 <color key="textColor" red="0.98431372549999996" green="0.2470588235" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25.8 m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMD-pZ-yYw">
-                                <rect key="frame" x="240" y="257" width="65" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMD-pZ-yYw">
+                                <rect key="frame" x="240" y="255" width="65" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="LtG-gq-3Ry"/>
                                     <constraint firstAttribute="height" constant="20.5" id="fRD-d4-b2Z"/>
@@ -441,7 +437,7 @@ It is the trio master of both the lake guardians and the creation trio.</string>
                                     </mask>
                                 </variation>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="38o-Ng-uan">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="38o-Ng-uan">
                                 <rect key="frame" x="20" y="328" width="96" height="96"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="crV-ov-J4j"/>
@@ -456,7 +452,7 @@ It is the trio master of both the lake guardians and the creation trio.</string>
                                     </mask>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="fRh-kp-rQM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fRh-kp-rQM">
                                 <rect key="frame" x="484" y="328" width="96" height="96"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="2hP-df-7kv"/>
@@ -471,14 +467,14 @@ It is the trio master of both the lake guardians and the creation trio.</string>
                                     </mask>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="JG6-cH-P39">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="next" translatesAutoresizingMaskIntoConstraints="NO" id="JG6-cH-P39">
                                 <rect key="frame" x="273" y="363" width="54" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="k9J-id-7iL"/>
                                     <constraint firstAttribute="height" constant="27" id="tV3-lx-m7r"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ivysaurususr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgd-RD-Zq7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgd-RD-Zq7">
                                 <rect key="frame" x="16" y="424" width="104" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="104" id="Cai-Cp-Zti"/>
@@ -490,7 +486,7 @@ It is the trio master of both the lake guardians and the creation trio.</string>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ivysaurususr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNN-sd-7AC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNN-sd-7AC">
                                 <rect key="frame" x="480" y="424" width="104" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="3Ww-nS-HKV"/>
@@ -502,7 +498,7 @@ It is the trio master of both the lake guardians and the creation trio.</string>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LVL 30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ytu-Ps-9LB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ytu-Ps-9LB">
                                 <rect key="frame" x="273" y="392" width="54" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="LV9-Pu-UjP"/>
@@ -518,7 +514,7 @@ It is the trio master of both the lake guardians and the creation trio.</string>
                             <constraint firstItem="JCg-fr-kSL" firstAttribute="trailing" secondItem="v7f-SF-jS4" secondAttribute="trailingMargin" id="3bG-XN-or5"/>
                             <constraint firstAttribute="trailing" secondItem="lb5-G8-NGn" secondAttribute="trailing" id="7g6-Yh-Xo9"/>
                             <constraint firstItem="SMD-pZ-yYw" firstAttribute="leading" secondItem="97g-qB-3Ad" secondAttribute="trailing" constant="13" id="9is-kE-jat"/>
-                            <constraint firstItem="lb5-G8-NGn" firstAttribute="top" secondItem="SMD-pZ-yYw" secondAttribute="bottom" constant="19" id="AZg-0Z-4T1"/>
+                            <constraint firstItem="lb5-G8-NGn" firstAttribute="top" secondItem="SMD-pZ-yYw" secondAttribute="bottom" constant="21.5" id="AZg-0Z-4T1"/>
                             <constraint firstItem="4e4-Ty-1db" firstAttribute="leading" secondItem="v7f-SF-jS4" secondAttribute="leading" id="EfZ-HE-Ldr"/>
                             <constraint firstItem="Ytu-Ps-9LB" firstAttribute="centerX" secondItem="v7f-SF-jS4" secondAttribute="centerX" id="Ewc-rG-Mmd"/>
                             <constraint firstItem="I1B-1n-nzA" firstAttribute="top" secondItem="JCg-fr-kSL" secondAttribute="bottom" constant="13" id="FLm-GS-GeP"/>
@@ -564,15 +560,16 @@ It is the trio master of both the lake guardians and the creation trio.</string>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="arrow" destination="JG6-cH-P39" id="pKb-wC-J1m"/>
                         <outlet property="descriptionLbl" destination="JCg-fr-kSL" id="mCa-Ht-OcZ"/>
                         <outlet property="ev1Img" destination="38o-Ng-uan" id="XfA-VI-8qq"/>
                         <outlet property="ev1Name" destination="Zgd-RD-Zq7" id="Gmm-cb-jeS"/>
                         <outlet property="ev2Img" destination="fRh-kp-rQM" id="WwP-xC-aLt"/>
-                        <outlet property="ev2Lvl" destination="Ytu-Ps-9LB" id="YWV-E8-EqQ"/>
                         <outlet property="ev2Name" destination="nNN-sd-7AC" id="ogQ-bT-yb4"/>
                         <outlet property="heightLbl" destination="qfh-ax-V0o" id="mmf-os-OdE"/>
                         <outlet property="idLbl" destination="pCV-6f-1sJ" id="xMK-gb-uFU"/>
                         <outlet property="imgLbl" destination="x2g-PW-dBZ" id="icQ-0a-eIa"/>
+                        <outlet property="lvlLbl" destination="Ytu-Ps-9LB" id="Q7Y-uF-TFh"/>
                         <outlet property="nameLbl" destination="c6O-2V-Rgp" id="AaF-IG-nFn"/>
                         <outlet property="type1Lbl" destination="MKg-DB-9uF" id="mVh-td-Wmq"/>
                         <outlet property="type2Lbl" destination="Rqw-Da-eLu" id="BaB-ev-aB2"/>
@@ -585,12 +582,10 @@ It is the trio master of both the lake guardians and the creation trio.</string>
         </scene>
     </scenes>
     <resources>
-        <image name="1" width="96" height="96"/>
         <image name="193" width="96" height="96"/>
-        <image name="2" width="96" height="96"/>
         <image name="25" width="96" height="96"/>
-        <image name="3" width="96" height="96"/>
         <image name="back" width="512" height="512"/>
+        <image name="next" width="512" height="512"/>
         <image name="pbg" width="1920" height="1200"/>
         <image name="speaker" width="512" height="512"/>
     </resources>
